@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Athena – Profile Setup</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+<div class="profile-container glass">
+  <h1>Set up your Academic Profile</h1>
+  <p>This helps Athena personalize your study experience.</p>
+
+  <form id="profileForm">
+
+    <!-- BASIC DETAILS -->
+    <label>Full Name</label>
+    <input type="text" id="name" required />
+
+    <label>Email</label>
+    <input type="email" id="email" required />
+
+    <label>Phone Number</label>
+    <input type="tel" id="phone" />
+
+    <!-- ACADEMIC LEVEL -->
+    <label class="section-title">Academic Level</label>
+
+    <div class="radio-group">
+  <label class="radio-option">
+    <input type="radio" name="level" value="school" />
+    <span>School / High School</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="level" value="ug" />
+    <span>Undergraduate</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="level" value="pg" />
+    <span>Postgraduate</span>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="level" value="phd" />
+    <span>PhD</span>
+  </label>
+</div>
+
+    <!-- DYNAMIC FIELDS -->
+    <div id="academicFields"></div>
+
+    <button type="submit">Continue →</button>
+  </form>
+</div>
+
+<script type="module" src="profile.js"></script>
+</body>
+</html>

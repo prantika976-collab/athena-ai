@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5f6cff, #a855f7, #ec4899);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.profile-container {
+  width: 440px;
+  padding: 28px;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 6px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.section-title {
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.radio-group {
+  margin-top: 8px;
+}
+
+.radio-group label {
+  display: block;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 26px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}

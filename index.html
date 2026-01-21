@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Athena</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Parsing Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+
+  <!-- Markdown + PDF -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ================= MODE BAR ================= -->
+  <div class="mode-bar">
+    <button class="mode-btn active" data-mode="study">Study</button>
+    <button class="mode-btn" data-mode="exam">Exam Prep</button>
+    <button class="mode-btn" data-mode="assignment">Homework / Assignment / Projects</button>
+    <button class="mode-btn" data-mode="competition">Competitive Prep</button>
+    <button class="mode-btn" data-mode="mentor">Mentor</button>
+  </div>
+
+  <!-- ================= MAIN LAYOUT ================= -->
+  <div class="main-layout">
+
+    <!-- ===== LEFT : CHAT HISTORY ===== -->
+    <div class="sidebar-left">
+      <h3>Chats</h3>
+      <button id="newChatBtn">＋ New Chat</button>
+      <div id="chatList"></div>
+      <p style="font-size:12px; opacity:0.6; margin-top:8px;">
+        Chat history will appear here.
+      </p>
+    </div>
+
+    <!-- ===== CENTER : CHAT ===== -->
+    <div class="chat-wrapper">
+      <div id="chat-container">
+        <div class="message ai">
+          Hi 👋  
+          Upload notes, paste text, or ask questions — Athena is ready.
+        </div>
+      </div>
+
+      <div class="input-bar">
+        <label class="attach-btn">
+          📎
+          <input type="file" id="fileInput" multiple hidden />
+        </label>
+
+        <textarea
+          id="userInput"
+          placeholder="Paste notes, ask doubts, etc."
+        ></textarea>
+
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+
+    <!-- ===== RIGHT : DOUBT CENTER ===== -->
+    <div class="sidebar-right">
+      <h3>Doubt Center <span style="font-size:12px; opacity:0.6;">(Beta – Phase 2)</span></h3>
+      <input
+        type="text"
+        placeholder="Quick doubts (coming soon)"
+        disabled
+      />
+      <p style="font-size:13px; opacity:0.7; line-height:1.4;">
+        Context-aware doubt solving based on what you’re studying.<br>
+        🚧 Rolling out after hackathon demo.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
