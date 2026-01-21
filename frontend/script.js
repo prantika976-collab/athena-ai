@@ -89,7 +89,7 @@ function downloadPDF(text) {
 async function loadChats() {
   if (!token) return;
 
-  const res = await fetch("https://athena-backend-c8co.onrender.com", {
+  const res = await fetch("https://athena-backend-c8co.onrender.com/conversations", {
     headers: authHeader()
   });
 
@@ -274,4 +274,5 @@ window.addEventListener("load", () => {
   currentExamConversationId = null;
   chat.innerHTML = "";
 });
+
 
