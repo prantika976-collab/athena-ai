@@ -15,10 +15,7 @@ app.use(express.json());
 
 /* ================= DATABASE ================= */
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(process.env.MONGODB_URI);
 
 /* ================= SCHEMAS ================= */
 
@@ -1368,4 +1365,5 @@ if (messageCount % 15 === 0) {
 app.listen(3001, () => {
   console.log("🚀 Athena backend running on http://localhost:3001");
 });
+
 
